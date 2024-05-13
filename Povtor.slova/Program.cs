@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 class Program
 {
@@ -15,10 +14,8 @@ class Program
 
     static string HighlightRepeatedWords(string input)
     {
-        // Регулярное выражение для поиска повторяющихся слов
         string pattern = @"\b(\w+)\b(?=.*\b\1\b)";
 
-        // Заменяем найденные слова на выделенные тегами <strong>
         string result = Regex.Replace(input, pattern, "<strong>$1</strong>");
 
         return result;
